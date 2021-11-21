@@ -1,41 +1,19 @@
-import { SpaceXLogoSVG } from "../../assets/svgs";
+import { Link } from "react-router-dom";
+
 import { NAVBAR_LINKS } from "./Header.constants";
-import { Container } from "./Header.style";
+import { StatusBadge } from "./Header.types";
+import { HeaderView } from "./HeaderView";
 
-const STATUS_BADGE = "plus";
+const badgeStatus: StatusBadge = "vip";
 
-const STATUS_TEXT: { [key: string]: string } = {
-  light: "Light",
-  plus: "Plus",
-  vip: "VIP",
-};
-
-const listNavbarLinks = NAVBAR_LINKS.map((item) => (
+const listNavBarLinks = NAVBAR_LINKS.map((item) => (
   <li key={item.title}>
-    <a href={item.link}>{item.title}</a>
+    <Link to={item.link}>{item.title}</Link>
   </li>
 ));
 
-const Header = () => {
-  return (
-    <Container>
-      <div className="header--box">
-        <div className="header--wrapper">
-          <a href="/" className="header--logoLink">
-            <SpaceXLogoSVG />
-          </a>
-
-          <nav className="header--nav">
-            <ul>{listNavbarLinks}</ul>
-          </nav>
-
-          <div className={`header--badge ${STATUS_BADGE}`}>
-            {STATUS_TEXT[STATUS_BADGE] ?? ""}
-          </div>
-        </div>
-      </div>
-    </Container>
-  );
+const Header = (): JSX.Element => {
+  return <HeaderView badgeStatus={badgeStatus} listNavBarLinks={listNavBarLinks} />;
 };
 
-export { Header };
+export default Header;

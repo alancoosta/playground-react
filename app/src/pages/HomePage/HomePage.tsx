@@ -1,7 +1,7 @@
 import { Header } from "components/Header";
 
-const Home = () => {
+const HomePage = (): JSX.Element => {
   return <Header />;
 };
 
-export { Home };
+export default HomePage;

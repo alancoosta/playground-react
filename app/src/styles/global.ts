@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #312941;
+    background: pink;
     color: #FFF;
     -webkit-font-smoothing: antialiased;
   }
@@ -21,6 +21,14 @@ const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+  }
+
+  ul, li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 

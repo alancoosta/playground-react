@@ -1,5 +1,3 @@
-export const STATUS_PREMIUM = "plus";
-
 export const NAVBAR_LINKS = [
   {
     title: "Falcon9",

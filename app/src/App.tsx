@@ -1,12 +1,18 @@
-import "./App.css";
+import { Suspense } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import { AppRouter } from "routes";
+
 import { GlobalStyle } from "./styles/global";
 
 const App = (): JSX.Element => {
   return (
-    <>
-      <h1>Teste</h1>
-      <GlobalStyle />
-    </>
+    <Suspense fallback={<div />}>
+      <Router>
+        <GlobalStyle />
+        <AppRouter />
+      </Router>
+    </Suspense>
   );
 };
 
