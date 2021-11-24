@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { SpaceXLogo } from "assets/svg";
 
 import { HeaderPropsView } from "./Header.types";
-import { Container } from "./HeaderView.style";
+import { Container } from "./HeaderView.styles";
 
-const HeaderView = ({ listNavBarLinks, badgeStatus }: HeaderPropsView): JSX.Element => {
+const HeaderView = ({ listNavBarLinksView, badgeStatus }: HeaderPropsView): JSX.Element => {
   const badgeText: { [key: string]: string } = {
     light: "Light",
     plus: "Plus",
@@ -21,7 +21,7 @@ const HeaderView = ({ listNavBarLinks, badgeStatus }: HeaderPropsView): JSX.Elem
           </Link>
 
           <nav className="header--nav">
-            <ul>{listNavBarLinks}</ul>
+            <ul>{listNavBarLinksView}</ul>
           </nav>
 
           <div className={`header--badge ${badgeStatus}`}>{badgeText[badgeStatus] ?? ""}</div>

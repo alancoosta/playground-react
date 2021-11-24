@@ -6,14 +6,14 @@ import { HeaderView } from "./HeaderView";
 
 const badgeStatus: StatusBadge = "vip";
 
-const listNavBarLinks = NAVBAR_LINKS.map((item) => (
+const listNavBarLinksView = NAVBAR_LINKS.map((item) => (
   <li key={item.title}>
     <Link to={item.link}>{item.title}</Link>
   </li>
 ));
 
 const Header = (): JSX.Element => {
-  return <HeaderView badgeStatus={badgeStatus} listNavBarLinks={listNavBarLinks} />;
+  return <HeaderView badgeStatus={badgeStatus} listNavBarLinksView={listNavBarLinksView} />;
 };
 
 export default Header;

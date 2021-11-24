@@ -1,6 +1,6 @@
 export type StatusBadge = "light" | "plus" | "vip";
 
 export interface HeaderPropsView {
-  listNavBarLinks: JSX.Element[];
+  listNavBarLinksView: JSX.Element[];
   badgeStatus: StatusBadge;
 }
