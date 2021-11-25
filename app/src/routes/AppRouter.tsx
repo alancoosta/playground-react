@@ -14,4 +14,4 @@ const AppRouter = (): JSX.Element => {
   );
 };
 
-export { AppRouter };
+export default AppRouter;

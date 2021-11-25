@@ -27,6 +27,15 @@
     "react"
   ],
   "rules": {
+    "@typescript-eslint/no-shadow": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "import-helpers/order-imports": [
       "warn",
       {
@@ -49,23 +58,21 @@
         "alphabetize": { "order": "asc", "ignoreCase": true }
       }
     ],
-    "import/extensions": [
+    "import/no-extraneous-dependencies": [
       "error",
-      "ignorePackages",
       {
-        "ts": "never",
-        "tsx": "never"
+        "devDependencies": ["**/*.test.ts", "**/*.test.tsx", "**/setupTests.ts"]
       }
     ],
     "import/prefer-default-export": "off",
+    "no-restricted-exports": 0,
     "no-use-before-define": 0,
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react/function-component-definition": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/no-shadow": "error",
-    "no-restricted-exports": 0
+    "no-shadow": "off"
   },
   "settings": {
     "import/resolver": {

@@ -1,1 +1,13 @@
-export default "";
+import React from "react";
+
+import { shallow } from "enzyme";
+
+import { HeaderView } from "./HeaderView";
+
+describe("HeaderView", () => {
+  it("should render HeaderView", () => {
+    const wrapper = shallow(<HeaderView badgeStatus="vip" />);
+
+    expect(wrapper.exists()).toBe(true);
+  });
+});
