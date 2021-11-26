@@ -22,11 +22,17 @@ export default {
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",
-    "!src/index.ts",
-    "!src/**/*.styles.ts",
+    "!src/**/index.{js,jsx,ts,tsx}",
+    "!src/index.tsx",
+    "!src/index.dev.ts",
+    "!src/**/*.style.ts",
     "!src/config/**/*.ts",
     "!src/**/*.d.ts",
     "!src/**/*.stories.{js,jsx,ts,tsx}",
+    "!src/webpack.config.{dev,prod}.js",
+    "!src/analyze.js",
+    "!src/paths.js",
+    "!src/clients/**/*",
   ],
 
   // The directory where Jest should output its coverage files
@@ -163,7 +169,7 @@ export default {
   // ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
-  // testRegex: [],
+  testRegex: ["((\\.|/*.)(test))\\.[tj]sx?$"],
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: undefined,

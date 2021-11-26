@@ -16,9 +16,9 @@ install-dev-dependencies:
 run-dev:
 	cd app && yarn start
 
-# .PHONY: run-test
-# run-test:
-# 	cd app && yarn test
+.PHONY: run-test
+run-test:
+	cd app && yarn test
 
 # .PHONY: run-component-test
 # run-component-test:

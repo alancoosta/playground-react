@@ -27,3 +27,5 @@ yarn-error.log*
 .eslintcache
 
 app/package-lock.json
+
+app/coverage

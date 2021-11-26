@@ -1,10 +1,8 @@
 import { StatusBadge } from "./Header.types";
 import { HeaderView } from "./HeaderView";
 
-const badgeStatus: StatusBadge = "vip";
+const badgeStatus: StatusBadge = "plus";
 
-const Header = (): JSX.Element => {
+export const Header = (): JSX.Element => {
   return <HeaderView badgeStatus={badgeStatus} />;
 };
-
-export default Header;

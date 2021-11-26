@@ -1,3 +1,5 @@
+import { BadgeText } from "./Header.types";
+
 export const NAVBAR_LINKS = [
   {
     title: "Falcon9",
@@ -24,3 +26,9 @@ export const NAVBAR_LINKS = [
     link: "",
   },
 ];
+
+export const BADGE_TEXT_LIST: { [key: string]: string } = {
+  light: BadgeText.Light,
+  plus: BadgeText.Plus,
+  vip: BadgeText.Vip,
+};

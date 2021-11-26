@@ -1,16 +1,13 @@
 import { Link } from "react-router-dom";
 
-import { SpaceXLogo } from "../../assets/svg";
-import { NAVBAR_LINKS } from "./Header.constants";
+import { SpaceXLogo } from "assets/svg";
+
+import { NAVBAR_LINKS, BADGE_TEXT_LIST } from "./Header.constants";
 import { HeaderPropsView } from "./Header.types";
 import { Container } from "./HeaderView.styles";
 
-const HeaderView = ({ badgeStatus }: HeaderPropsView): JSX.Element => {
-  const badgeText: { [key: string]: string } = {
-    light: "Light",
-    plus: "Plus",
-    vip: "VIP",
-  };
+export const HeaderView = ({ badgeStatus }: HeaderPropsView): JSX.Element => {
+  const badgeText = BADGE_TEXT_LIST[badgeStatus];
 
   const listNavBarLinksView = NAVBAR_LINKS.map((item) => (
     <li key={item.title}>
@@ -30,11 +27,9 @@ const HeaderView = ({ badgeStatus }: HeaderPropsView): JSX.Element => {
             <ul>{listNavBarLinksView}</ul>
           </nav>
 
-          <div className={`header--badge ${badgeStatus}`}>{badgeText[badgeStatus] ?? ""}</div>
+          <div className={`header--badge ${badgeStatus}`}>{badgeText ?? ""}</div>
         </div>
       </div>
     </Container>
   );
 };
-
-export { HeaderView };
