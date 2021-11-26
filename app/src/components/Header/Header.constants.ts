@@ -3,27 +3,27 @@ import { BadgeStatusText } from "./Header.types";
 export const NAVBAR_LINKS = [
   {
     title: "Falcon9",
-    link: "",
+    link: "/",
   },
   {
     title: "Falcon Heavy",
-    link: "",
+    link: "/",
   },
   {
     title: "Dragon",
-    link: "",
+    link: "/",
   },
   {
     title: "Starship",
-    link: "",
+    link: "/",
   },
   {
     title: "Human Spaceflight",
-    link: "",
+    link: "/",
   },
   {
     title: "Rideshare",
-    link: "",
+    link: "/",
   },
 ];
 

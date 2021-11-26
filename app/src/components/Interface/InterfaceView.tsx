@@ -4,7 +4,7 @@ interface Size {
   large: string;
 }
 
-const InterfaceView = (): JSX.Element => {
+export const InterfaceView = (): JSX.Element => {
   const sizes: Size = {
     small: "small",
     medium: "medium",
@@ -21,5 +21,3 @@ const InterfaceView = (): JSX.Element => {
     </div>
   );
 };
-
-export { InterfaceView };

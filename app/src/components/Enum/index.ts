@@ -1,1 +1,1 @@
-export { default as Enum } from "./Enum";
+export { Enum } from "./Enum";

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { SpaceXLogo } from "assets/svg";
+import GoogleLogo from "assets/svg/google-logo.svg";
 import "./HeaderView.styles.scss";
 
 import { NAVBAR_LINKS } from "./Header.constants";
@@ -18,14 +18,14 @@ export const HeaderView = ({ badgeStatus, badgeStatusText }: HeaderPropsView): J
       <div className="header--box">
         <div className="header--wrapper">
           <Link to="/" className="header--logoLink">
-            <SpaceXLogo />
+            <img src={GoogleLogo} alt="" />
           </Link>
 
           <nav className="header--nav">
             <ul>{listNavBarLinksView}</ul>
           </nav>
 
-          <div className={`header--badge ${badgeStatus}`}>{badgeStatusText ?? ""}</div>
+          <div className={`header--badge ${badgeStatus}`}>{badgeStatusText}</div>
         </div>
       </div>
     </div>

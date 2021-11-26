@@ -1,1 +1,1 @@
-export { default as Interface } from "./Interface";
+export { Interface } from "./Interface";

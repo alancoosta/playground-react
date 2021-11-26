@@ -35,10 +35,18 @@
   height: auto;
   width: 210px;
 
-  > svg {
+  img {
     fill: #ffffff;
     height: auto;
     width: 100%;
+
+    &.fill-white {
+      fill: #ffffff;
+    }
+
+    &.letter_s {
+      fill: #ffffff;
+    }
   }
 }
 

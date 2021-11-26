@@ -4,7 +4,7 @@ enum Size {
   LARGE = "L",
 }
 
-const EnumView = (): JSX.Element => {
+export const EnumView = (): JSX.Element => {
   return (
     <div style={{ margin: 20 }}>
       <h1>Enum</h1>
@@ -18,5 +18,3 @@ const EnumView = (): JSX.Element => {
     </div>
   );
 };
-
-export { EnumView };

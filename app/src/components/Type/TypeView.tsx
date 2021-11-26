@@ -1,6 +1,6 @@
 type Size = "SMALL" | "MEDIUM" | "LARGE";
 
-const TypeView = (): JSX.Element => {
+export const TypeView = (): JSX.Element => {
   const typeSmall: Size = "SMALL";
   const typeMedium: Size = "MEDIUM";
   const typeLarge: Size = "LARGE";
@@ -15,5 +15,3 @@ const TypeView = (): JSX.Element => {
     </div>
   );
 };
-
-export { TypeView };
