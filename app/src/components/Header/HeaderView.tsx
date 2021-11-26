@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
 import { SpaceXLogo } from "assets/svg";
+import "./HeaderView.styles.scss";
 
 import { NAVBAR_LINKS } from "./Header.constants";
 import { HeaderPropsView } from "./Header.types";
-import { Container } from "./HeaderView.styles";
 
 export const HeaderView = ({ badgeStatus, badgeStatusText }: HeaderPropsView): JSX.Element => {
   const listNavBarLinksView = NAVBAR_LINKS.map((item) => (
@@ -14,7 +14,7 @@ export const HeaderView = ({ badgeStatus, badgeStatusText }: HeaderPropsView): J
   ));
 
   return (
-    <Container>
+    <div className="header--container">
       <div className="header--box">
         <div className="header--wrapper">
           <Link to="/" className="header--logoLink">
@@ -28,6 +28,6 @@ export const HeaderView = ({ badgeStatus, badgeStatusText }: HeaderPropsView): J
           <div className={`header--badge ${badgeStatus}`}>{badgeStatusText ?? ""}</div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
