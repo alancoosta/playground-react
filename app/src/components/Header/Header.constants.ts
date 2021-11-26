@@ -1,4 +1,4 @@
-import { BadgeText } from "./Header.types";
+import { BadgeStatusText } from "./Header.types";
 
 export const NAVBAR_LINKS = [
   {
@@ -27,8 +27,8 @@ export const NAVBAR_LINKS = [
   },
 ];
 
-export const BADGE_TEXT_LIST: { [key: string]: string } = {
-  light: BadgeText.Light,
-  plus: BadgeText.Plus,
-  vip: BadgeText.Vip,
+export const BADGE_STATUS_TEXT_LIST: { [key: string]: string } = {
+  light: BadgeStatusText.Light,
+  plus: BadgeStatusText.Plus,
+  vip: BadgeStatusText.Vip,
 };

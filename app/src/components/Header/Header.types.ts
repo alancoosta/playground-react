@@ -1,11 +1,11 @@
 export type StatusBadge = "light" | "plus" | "vip";
 
-export interface HeaderPropsView {
-  badgeStatus: StatusBadge;
-}
-
-export enum BadgeText {
+export enum BadgeStatusText {
   Light = "Light",
   Plus = "Plus",
   Vip = "VIP",
+}
+export interface HeaderPropsView {
+  badgeStatus: StatusBadge;
+  badgeStatusText: string;
 }

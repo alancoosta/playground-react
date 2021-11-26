@@ -1,8 +1,10 @@
+import { BADGE_STATUS_TEXT_LIST } from "./Header.constants";
 import { StatusBadge } from "./Header.types";
 import { HeaderView } from "./HeaderView";
 
-const badgeStatus: StatusBadge = "plus";
-
 export const Header = (): JSX.Element => {
-  return <HeaderView badgeStatus={badgeStatus} />;
+  const badgeStatus: StatusBadge = "plus";
+  const badgeStatusText = BADGE_STATUS_TEXT_LIST[badgeStatus];
+
+  return <HeaderView badgeStatus={badgeStatus} badgeStatusText={badgeStatusText} />;
 };
