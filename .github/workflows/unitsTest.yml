@@ -1,7 +1,10 @@
 name: Units test
-
-on: ["push", "pull_request"]
-
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   test:
     name: Units test with Jest
@@ -27,4 +30,4 @@ jobs:
       - name: Run Jest
         run: |
           cd app
-          yarn test --coverage
+          yarn test
