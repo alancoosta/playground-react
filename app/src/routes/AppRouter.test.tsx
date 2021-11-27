@@ -1,16 +1,8 @@
-import { Route, Routes } from "react-router-dom";
-
-import { EnumView } from "components/Enum/EnumView";
-
-import HomePage from "pages/HomePage";
-import NotFoundPage from "pages/NotFoundPage";
+import { Route } from "react-router-dom";
 
 import { shallow } from "enzyme";
 
 import AppRouter from "./AppRouter";
-
-jest.mock("../pages/HomePage");
-jest.mock("../pages/NotFoundPage");
 
 describe("AppRouter", () => {
   it("should render AppRouter", () => {
