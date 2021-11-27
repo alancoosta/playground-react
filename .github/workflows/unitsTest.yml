@@ -28,4 +28,5 @@ jobs:
 
       - name: Run Jest
         run: |
+          cd app
           yarn test --coverage
