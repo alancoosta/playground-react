@@ -25,6 +25,6 @@ jobs:
           working-directory: app
 
       - name: Run Jest
-        with:
-          working-directory: app
-        run: yarn test --coverage
+        run: |
+          cd app
+          yarn test --coverage
