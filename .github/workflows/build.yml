@@ -6,6 +6,16 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  test:
+    name: Unit test with Jest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Unit test with Jest
+        run: | 
+          cd app
+          npm install
+          npm test
   sonarcloud:
     name: SonarCloud
     runs-on: ubuntu-latest
