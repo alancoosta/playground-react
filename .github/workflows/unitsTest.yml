@@ -1,4 +1,4 @@
-name: Units test
+name: Units Tests
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
 jobs:
   test:
-    name: Units test with Jest
+    name: Units tests with Jest
     runs-on: ubuntu-latest
 
     env:
@@ -30,4 +30,4 @@ jobs:
       - name: Run Jest
         run: |
           cd app
-          yarn test
+          yarn test --coverage
