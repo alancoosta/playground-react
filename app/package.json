@@ -68,7 +68,7 @@
     "ts-node": "^10.4.0"
   },
   "jestSonar": {
-    "reportPath": "reports",
+    "reportPath": "coverage",
     "reportFile": "jest-sonar-reporter.xml",
     "indent": 4
   }

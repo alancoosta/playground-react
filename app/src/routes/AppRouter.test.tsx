@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
+import { EnumView } from "components/Enum/EnumView";
+
 import HomePage from "pages/HomePage";
 import NotFoundPage from "pages/NotFoundPage";
 
@@ -7,18 +9,13 @@ import { shallow } from "enzyme";
 
 import AppRouter from "./AppRouter";
 
-describe("NotFoundPage", () => {
-  it("should render NotFoundPage", () => {
+jest.mock("../pages/HomePage");
+jest.mock("../pages/NotFoundPage");
+
+describe("AppRouter", () => {
+  it("should render AppRouter", () => {
     const wrapper = shallow(<AppRouter />);
 
-    expect(
-      wrapper.matchesElement(
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>,
-      ),
-    );
+    expect(wrapper.find(Route)).toHaveLength(2);
   });
 });

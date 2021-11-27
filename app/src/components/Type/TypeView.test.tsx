@@ -16,6 +16,6 @@ describe("TypeView", () => {
           <h2>Large: LARGE</h2>
         </div>,
       ),
-    );
+    ).toBeTruthy();
   });
 });

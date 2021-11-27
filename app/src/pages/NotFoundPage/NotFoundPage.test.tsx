@@ -6,6 +6,6 @@ describe("NotFoundPage", () => {
   it("should render NotFoundPage", () => {
     const wrapper = shallow(<NotFoundPage />);
 
-    expect(wrapper.matchesElement(<h1>Pagina nao encontrada.</h1>));
+    expect(wrapper.matchesElement(<h1>Pagina nao encontrada.</h1>)).toBeTruthy();
   });
 });

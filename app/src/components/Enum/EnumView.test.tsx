@@ -19,6 +19,6 @@ describe("EnumView", () => {
           <h2>Large: L</h2>
         </div>,
       ),
-    );
+    ).toBeTruthy();
   });
 });

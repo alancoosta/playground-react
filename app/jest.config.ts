@@ -29,14 +29,11 @@ export default {
     "!src/config/**/*.ts",
     "!src/**/*.d.ts",
     "!src/**/*.stories.{js,jsx,ts,tsx}",
-    "!src/webpack.config.{dev,prod}.js",
-    "!src/analyze.js",
-    "!src/paths.js",
-    "!src/clients/**/*",
+    "!src/reportWebVitals.ts",
   ],
 
   // The directory where Jest should output its coverage files
-  coverageDirectory: "reports",
+  coverageDirectory: "coverage",
 
   // An array of regexp pattern strings used to skip coverage collection
   // coveragePathIgnorePatterns: [

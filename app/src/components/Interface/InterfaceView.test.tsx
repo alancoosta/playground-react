@@ -16,6 +16,6 @@ describe("InterfaceView", () => {
           <h2>Large: large</h2>
         </div>,
       ),
-    );
+    ).toBeTruthy();
   });
 });

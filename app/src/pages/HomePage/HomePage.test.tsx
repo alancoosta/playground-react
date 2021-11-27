@@ -20,6 +20,6 @@ describe("HomePage", () => {
           <Type />
         </div>,
       ),
-    );
+    ).toBeTruthy();
   });
 });
