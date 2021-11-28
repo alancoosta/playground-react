@@ -1,6 +1,9 @@
 name: Deploy SIT
 on:
-  workflow_dispatch:
+   workflow_run:
+    workflows: ["Deploy DEV"]
+    type:
+      - complete
 
 jobs:
   units-tests:
