@@ -8,6 +8,8 @@ const App = (): JSX.Element => {
   return (
     <Suspense fallback={<div />}>
       <Router>
+
+
         <AppRouter />
       </Router>
     </Suspense>
