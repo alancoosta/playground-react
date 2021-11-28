@@ -5,11 +5,11 @@ import AppRouter from "./routes";
 import "styles/global.scss";
 
 const App = (): JSX.Element => {
+  const teste = 'teste'
+
   return (
     <Suspense fallback={<div />}>
       <Router>
-
-
         <AppRouter />
       </Router>
     </Suspense>
