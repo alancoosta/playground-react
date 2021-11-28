@@ -1,1 +1,3 @@
-cd app && yarn lint:fix && yarn pretty-quick --staged
+cd app && 
+yarn lint:fix && 
+yarn pretty-quick --staged

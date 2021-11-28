@@ -20,7 +20,8 @@
     "start": "react-scripts start",
     "test": "jest --watch",
     "coverage": "jest --coverage",
-    "lint:fix": "yarn eslint --fix src"
+    "lint:fix": "eslint --fix --ext .ts,.tsx .",
+    "pretty-quick": "pretty-quick --pattern '**/*.*(ts|tsx)'"
   },
   "browserslist": {
     "production": [
