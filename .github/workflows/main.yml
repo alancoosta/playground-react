@@ -36,11 +36,10 @@ jobs:
           yarn jest --coverage
       
       - name: SonarCloud Scan
-        uses: mathrix-education/sonar-scanner@1.0.0
-        # uses: SonarSource/sonarcloud-github-action@master
-        # env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          # SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_sit:
     name: SIT
@@ -72,11 +71,10 @@ jobs:
           yarn jest --coverage
       
       - name: SonarCloud Scan
-        uses: mathrix-education/sonar-scanner@1.0.0
-        # uses: SonarSource/sonarcloud-github-action@master
-        # env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          # SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_uat:
     name: UAT
@@ -108,11 +106,10 @@ jobs:
           yarn jest --coverage
       
       - name: SonarCloud Scan
-        uses: mathrix-education/sonar-scanner@1.0.0
-        # uses: SonarSource/sonarcloud-github-action@master
-        # env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          # SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_prod:
     name: PROD
@@ -144,8 +141,7 @@ jobs:
           yarn jest --coverage
       
       - name: SonarCloud Scan
-        uses: mathrix-education/sonar-scanner@1.0.0
-        # uses: SonarSource/sonarcloud-github-action@master
-        # env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          # SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
