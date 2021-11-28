@@ -1,4 +1,4 @@
-name: Deploy DEV
+name: CI/CD
 on:
   push:
     branches:
@@ -7,10 +7,11 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  units-tests:
-    name: Units tests with Jest
+  deploy_dev:
+    name: Deploy DEV
     runs-on: ubuntu-latest
-    environment: DEV
+    environment:
+      name: DEV
 
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,19 +34,46 @@ jobs:
         run: |
           cd app
           yarn test --coverage
-
-  sonarcloud:
-    name: SonarCloud
-    runs-on: ubuntu-latest
-    environment: DEV
-    needs: units-tests
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
+      
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  deploy_sit:
+    name: DEPLOY SIT
+    runs-on: ubuntu-latest
+    environment:
+      name: SIT
+    needs: deploy_dev
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: app
+
+      - name: Run Jest
+        run: |
+          cd app
+          yarn test --coverage
+      
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+   
