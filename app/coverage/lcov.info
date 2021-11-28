@@ -87,7 +87,7 @@ DA:19,1
 DA:20,1
 LF:20
 LH:20
-BRDA:1,0,0,3
+BRDA:1,0,0,2
 BRDA:7,1,0,1
 BRF:2
 BRH:2
@@ -174,7 +174,7 @@ DA:10,1
 DA:11,1
 LF:11
 LH:11
-BRDA:3,0,0,2
+BRDA:3,0,0,3
 BRF:1
 BRH:1
 end_of_record
