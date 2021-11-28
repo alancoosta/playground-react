@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy_dev:
-    name: Deploy DEV
+    name: DEV
     runs-on: ubuntu-latest
     environment:
       name: DEV
@@ -36,13 +36,18 @@ jobs:
           yarn jest --coverage
       
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: mathrix-education/sonar-scanner@master
+        with:
+          version: 4.2.0.1873 # required
+          typescript: true
+          scan: true
+          args: --debug -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_sit:
-    name: DEPLOY SIT
+    name: SIT
     runs-on: ubuntu-latest
     environment:
       name: SIT
@@ -71,13 +76,18 @@ jobs:
           yarn jest --coverage
       
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: mathrix-education/sonar-scanner@master
+        with:
+          version: 4.2.0.1873 # required
+          typescript: true
+          scan: true
+          args: --debug -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_uat:
-    name: DEPLOY UAT
+    name: UAT
     runs-on: ubuntu-latest
     environment:
       name: UAT
@@ -106,13 +116,18 @@ jobs:
           yarn jest --coverage
       
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: mathrix-education/sonar-scanner@master
+        with:
+          version: 4.2.0.1873 # required
+          typescript: true
+          scan: true
+          args: --debug -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_prod:
-    name: DEPLOY PROD
+    name: PROD
     runs-on: ubuntu-latest
     environment:
       name: PROD
@@ -141,7 +156,12 @@ jobs:
           yarn jest --coverage
       
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: mathrix-education/sonar-scanner@master
+        with:
+          version: 4.2.0.1873 # required
+          typescript: true
+          scan: true
+          args: --debug -Dsonar.login=${{ secrets.SONAR_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
