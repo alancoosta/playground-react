@@ -1,3 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
+    <file path="/home/alancb/estudo/playgrounds/playground-react/app/src/components/Button/Button.test.tsx">
+        <testCase name="Enum should render Enum" duration="6"/>
+    </file>
 </testExecutions>
