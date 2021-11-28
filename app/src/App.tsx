@@ -5,7 +5,7 @@ import AppRouter from "./routes";
 import "styles/global.scss";
 
 const App = (): JSX.Element => {
-  const teste = 'teste'
+  const teste = "teste";
 
   return (
     <Suspense fallback={<div />}>

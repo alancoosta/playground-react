@@ -1,1 +1,1 @@
-cd app && yarn coverage
+cd app && yarn run coverage
