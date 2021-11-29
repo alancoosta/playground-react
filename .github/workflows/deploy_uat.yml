@@ -1,14 +1,14 @@
-name: Deploy DEV
+name: Deploy UAT
 
 on:
   workflow_call:
 
 jobs:
-  deploy_dev:
-    name: deploy_dev
+  deploy_uat:
+    name: deploy_uat
     runs-on: ubuntu-latest
     environment:
-      name: DEV
+      name: UAT
 
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

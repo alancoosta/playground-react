@@ -4,11 +4,11 @@ on:
   workflow_call:
 
 jobs:
-  deploy_dev:
-    name: deploy_dev
+  deploy_sit:
+    name: deploy_sit
     runs-on: ubuntu-latest
     environment:
-      name: DEV
+      name: SIT
 
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

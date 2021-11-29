@@ -1,4 +1,4 @@
-name: CI/CD
+name: Pipeline
 on:
   push:
     branches:
@@ -13,105 +13,15 @@ jobs:
 
   deploy_sit:
     name: SIT
-    runs-on: ubuntu-latest
-    environment:
-      name: SIT
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@9c15ef997f1360bc473fce49b38d46384bd51442
     needs: deploy_dev
-
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          working-directory: app
-
-      - name: Run Jest
-        run: |
-          cd app
-          yarn jest --coverage
-      
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_uat:
     name: UAT
-    runs-on: ubuntu-latest
-    environment:
-      name: UAT
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@9c15ef997f1360bc473fce49b38d46384bd51442
     needs: deploy_sit
-
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          working-directory: app
-
-      - name: Run Jest
-        run: |
-          cd app
-          yarn jest --coverage
-      
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
+    
   deploy_prod:
     name: PROD
-    runs-on: ubuntu-latest
-    environment:
-      name: PROD
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@9c15ef997f1360bc473fce49b38d46384bd51442
     needs: deploy_uat
-
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          working-directory: app
-
-      - name: Run Jest
-        run: |
-          cd app
-          yarn jest --coverage
-      
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
