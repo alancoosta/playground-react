@@ -9,40 +9,7 @@ on:
 jobs:
   deploy_dev:
     name: DEV
-    runs-on: ubuntu-latest
-    environment:
-      name: DEV
-
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    steps:
-      - name: SOOOONAR
-        uses: alancoosta/playground-react/.github/workflows/sonar.yml@7ce9dab0ab938abadc58a7655e08d38b720b8eea
-      
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-        with:
-          working-directory: app
-
-      - name: Run Jest
-        run: |
-          cd app
-          yarn jest --coverage
-      
-      # - name: SonarCloud Scan
-      #   uses: SonarSource/sonarcloud-github-action@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@7ce9dab0ab938abadc58a7655e08d38b720b8eea
 
   deploy_sit:
     name: SIT
