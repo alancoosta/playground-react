@@ -9,19 +9,19 @@ on:
 jobs:
   deploy_dev:
     name: DEV
-    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@9c15ef997f1360bc473fce49b38d46384bd51442
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@681002c6e6aa19149ef17d0ff8d2457a5e647032
 
   deploy_sit:
     name: SIT
-    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@9c15ef997f1360bc473fce49b38d46384bd51442
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@681002c6e6aa19149ef17d0ff8d2457a5e647032
     needs: deploy_dev
 
   deploy_uat:
     name: UAT
-    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@9c15ef997f1360bc473fce49b38d46384bd51442
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@681002c6e6aa19149ef17d0ff8d2457a5e647032
     needs: deploy_sit
     
   deploy_prod:
     name: PROD
-    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@9c15ef997f1360bc473fce49b38d46384bd51442
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@681002c6e6aa19149ef17d0ff8d2457a5e647032
     needs: deploy_uat
