@@ -8,7 +8,7 @@ on:
 
 jobs:
   sonar:
-    uses: ./.github/workflows/sonar.yml@v1
+    uses: alancoosta/playground-react/.github/workflows/sonar.yml@v1
 
   deploy_dev:
     name: DEV
