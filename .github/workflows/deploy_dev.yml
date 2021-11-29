@@ -4,9 +4,6 @@ on:
   workflow_call:
 
 jobs:
-  sonar:
-    uses: alancoosta/playground-react/.github/workflows/sonar.yml@7ce9dab0ab938abadc58a7655e08d38b720b8eea
-
   deploy_dev:
     name: DEV
     runs-on: ubuntu-latest
@@ -34,4 +31,7 @@ jobs:
         run: |
           cd app
           yarn jest --coverage
+
+      - name: SonarCloud
+        uses: alancoosta/playground-react/.github/workflows/sonar.yml@7ce9dab0ab938abadc58a7655e08d38b720b8eea
       
