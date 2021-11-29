@@ -9,7 +9,7 @@ on:
 jobs:
   deploy_dev:
     name: DEV
-    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@7ce9dab0ab938abadc58a7655e08d38b720b8eea
+    uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@61bd7b95b5b1fa66dafbc35a299f005b1760c250
 
   deploy_sit:
     name: SIT
