@@ -32,6 +32,8 @@ jobs:
           cd app
           yarn jest --coverage
 
-      - name: SonarCloud
-        uses: alancoosta/playground-react/.github/workflows/sonar.yml@7ce9dab0ab938abadc58a7655e08d38b720b8eea
-      
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
