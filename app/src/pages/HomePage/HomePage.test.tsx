@@ -1,7 +1,4 @@
-import { Enum } from "components/Enum";
-import { Header } from "components/Header";
-import { Interface } from "components/Interface";
-import { Type } from "components/Type";
+import { DateFns } from "components/DateFns";
 
 import { shallow } from "enzyme";
 
@@ -14,10 +11,7 @@ describe("HomePage", () => {
     expect(
       wrapper.matchesElement(
         <div>
-          <Header />
-          <Enum />
-          <Interface />
-          <Type />
+          <DateFns />
         </div>,
       ),
     ).toBeTruthy();
