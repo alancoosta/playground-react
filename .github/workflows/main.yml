@@ -10,6 +10,9 @@ jobs:
   deploy_dev:
     name: DEV
     uses: alancoosta/playground-react/.github/workflows/deploy_dev.yml@681002c6e6aa19149ef17d0ff8d2457a5e647032
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   deploy_sit:
     name: SIT
