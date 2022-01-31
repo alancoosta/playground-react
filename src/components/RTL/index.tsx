@@ -4,7 +4,7 @@ import axios from "axios";
 
 import { User } from "./types";
 
-export const RTL = () => {
+export const RTL = (): JSX.Element => {
   const [users, setUsers] = useState([]);
 
   function formatUserName(username: string) {

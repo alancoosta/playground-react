@@ -1,18 +1,27 @@
-import { RTL } from "components/RTL";
+import { useCallback } from "react";
 
 const HomePage = (): JSX.Element => {
-  const sharedFunction = async () => {
-    await navigator.share({
+  const sharedFunction = useCallback(async () => {
+    navigator.share({
       title: "Title",
       text: "Text",
       url: "https://google.com",
     });
-  };
+  }, []);
 
   return (
     <div>
-      <RTL />
-      <button type="button" onClick={sharedFunction}>
+      <button
+        style={{
+          height: 50,
+          width: 250,
+          border: "1px solid white",
+          backgroundColor: "transparent",
+          color: "white",
+        }}
+        type="button"
+        onClick={sharedFunction}
+      >
         Acessar
       </button>
     </div>

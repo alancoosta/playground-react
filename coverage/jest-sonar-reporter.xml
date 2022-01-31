@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Interface/Interface.test.tsx">
+        <testCase name="Interface should render Interface" duration="16"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/pages/NotFoundPage/NotFoundPage.test.tsx">
+        <testCase name="NotFoundPage should render NotFoundPage" duration="33"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Enum/EnumView.test.tsx">
+        <testCase name="EnumView should render EnumView" duration="45"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Interface/InterfaceView.test.tsx">
+        <testCase name="InterfaceView should render InterfaceView" duration="27"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/routes/AppRouter.test.tsx">
+        <testCase name="AppRouter should render AppRouter" duration="228"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/pages/HomePage/HomePage.test.tsx">
+        <testCase name="HomePage should render HomePage" duration="1"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Type/TypeView.test.tsx">
+        <testCase name="TypeView should render TypeView" duration="25"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Header/HeaderView.test.tsx">
+        <testCase name="HeaderView should render HeaderView with badge status light" duration="42"/>
+        <testCase name="HeaderView should render HeaderView with badge status plus" duration="8"/>
+        <testCase name="HeaderView should render HeaderView with badge status vip" duration="5"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Type/Type.test.tsx">
+        <testCase name="Type should render Type" duration="3"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Header/Header.test.tsx">
+        <testCase name="Header should render Header" duration="4"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Button/Button.test.tsx">
+        <testCase name="Enum should render Enum" duration="4"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/components/Enum/Enum.test.tsx">
+        <testCase name="Enum should render Enum" duration="5"/>
+    </file>
+    <file path="/home/alancb/estudo/playgrounds/playground-react/src/App.test.tsx">
+        <testCase name="App render App View" duration="6"/>
+    </file>
+</testExecutions>
