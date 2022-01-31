@@ -1,1 +1,1 @@
-cd app && yarn install
+yarn install
